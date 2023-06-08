@@ -1,8 +1,9 @@
-import 'package:first_task_s/button.dart';
+import 'package:first_task_s/Widgets/button.dart';
+import 'package:first_task_s/registartion_page.dart';
 import 'package:first_task_s/welcome_back_page.dart';
 import 'package:flutter/material.dart';
 
-import 'apbar.dart';
+import 'Widgets/apbar.dart';
 
 class LoginOrRegisterPage extends StatefulWidget {
   const LoginOrRegisterPage({super.key});
@@ -37,7 +38,7 @@ class _LoginOrRegisterPageState extends State<LoginOrRegisterPage> {
           ButtonCustom(context,295, 255, 255, 255, 1, "Register", true,(){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Text("Registration Page")),
+              MaterialPageRoute(builder: (context) => RegistrationPage()),
             );
           })
         ],

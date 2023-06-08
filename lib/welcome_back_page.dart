@@ -1,5 +1,6 @@
-import 'package:first_task_s/apbar.dart';
-import 'package:first_task_s/button.dart';
+import 'package:first_task_s/Widgets/apbar.dart';
+import 'package:first_task_s/Widgets/button.dart';
+import 'package:first_task_s/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -16,46 +17,30 @@ class _LoginPageState extends State<LoginPage> {
         appBar: CustomAppBar(),
         body: Column(
           children: [
-            SizedBox(height: 65),
+            SizedBox(height: 75),
             Align(
                 alignment: Alignment.topCenter,
                 child: Image.asset('assets/images/Welcome back.png')),
             SizedBox(
-              height: 13,
+              height: 18,
             ),
             Align(
                 alignment: Alignment.topCenter,
                 child: Image.asset('assets/images/Login to continue.png')),
             SizedBox(
-              height: 50,
+              height: 75,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                autofocus: false,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.mail_outlined),
-                  labelText: 'Email',
-                  contentPadding: EdgeInsets.fromLTRB(1.0, 12.0, 20.0, 12.0),
-                ),
-              ),
-            ),
+              child: CustomTextField("Username","person_icon.png")),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                autofocus: false,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.lock_outline),
-                  labelText: 'Password',
-                  contentPadding: EdgeInsets.fromLTRB(1.0, 12.0, 20.0, 12.0),
-                ),
-              ),
-            ),
+              child: CustomTextField("Password","lock_icon.png")),
+            SizedBox(height: 40,),
             Align(
                 alignment: Alignment.topRight,
                 child: Image.asset('assets/images/Forgot password_.png')),
+            SizedBox(height: 25),
             ButtonCustom(context, 315, 126, 253, 208, 1, "Login", false, ()=>{
             Navigator.push(
             context,
@@ -82,6 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 )
               ],
             ),
+            SizedBox(height: 25,),
             Image.asset("assets/images/img.png"),
             SizedBox(
               height: 25,
