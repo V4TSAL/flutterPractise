@@ -19,11 +19,11 @@ class _LoginOrRegisterPageState extends State<LoginOrRegisterPage> {
       appBar: CustomAppBar(),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 96,
           ),
           Image.asset('assets/images/Group 80243.png'),
-          SizedBox(
+          const SizedBox(
             height: 65,
           ),
           ButtonCustom(context,295, 126, 253, 208, 1, "Login", false,(){
@@ -32,7 +32,7 @@ class _LoginOrRegisterPageState extends State<LoginOrRegisterPage> {
           MaterialPageRoute(builder: (context) => LoginPage()),
           );
           }),
-          SizedBox(
+          const SizedBox(
             height: 18,
           ),
           ButtonCustom(context,295, 255, 255, 255, 1, "Register", true,(){
