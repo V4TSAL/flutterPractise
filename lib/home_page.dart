@@ -1,4 +1,5 @@
 import 'package:first_task_s/Widgets/apbar.dart';
+import 'package:first_task_s/Widgets/bottom_navigation.dart';
 import 'package:first_task_s/Widgets/profilepic.dart';
 import 'package:first_task_s/Widgets/custom_text.dart';
 import 'package:first_task_s/Widgets/rectangle_text.dart';
@@ -12,11 +13,19 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+int _selectedIndex = 0;
+
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
+      bottomNavigationBar: CustomBottomNavigationBar( _selectedIndex,(int index){
+        setState(() {
+          _selectedIndex=index;
+        });
+      }),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -45,10 +54,22 @@ class _HomePageState extends State<HomePage> {
             CustomLargeText(
               "Leverage agile frameworks to provide a robust test for high level overviews. Iterative approaches to corporate strategy foster collaborative timing.",),
             CustomSmallText("Ideal Contacts"),
-            Row(children: [TextInRectangle("Art","art.png"),TextInRectangle("Manufactures","factory.png")],),
-            Row(children: [TextInRectangle("Programmers","gaming.png"),TextInRectangle("Gaming","gaming.png")],),
-            Row(children: [TextInRectangle("Advertising","advertising.png"),TextInRectangle("Construction","construction.png")],),
-            Row(children: [TextInRectangle("Crypto","crypto.png"),TextInRectangle("Finance","crypto.png")],)
+            Row(children: [
+              TextInRectangle("Art", "art.png"),
+              TextInRectangle("Manufactures", "factory.png")
+            ],),
+            Row(children: [
+              TextInRectangle("Programmers", "gaming.png"),
+              TextInRectangle("Gaming", "gaming.png")
+            ],),
+            Row(children: [
+              TextInRectangle("Advertising", "advertising.png"),
+              TextInRectangle("Construction", "construction.png")
+            ],),
+            Row(children: [
+              TextInRectangle("Crypto", "crypto.png"),
+              TextInRectangle("Finance", "crypto.png")
+            ],)
           ],
         ),
       ),
