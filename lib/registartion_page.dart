@@ -1,5 +1,6 @@
 import 'package:first_task_s/Widgets/apbar.dart';
 import 'package:first_task_s/Widgets/button.dart';
+import 'package:first_task_s/Widgets/custom_text.dart';
 import 'package:first_task_s/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -23,11 +24,11 @@ class _RegistrationPageState extends State<RegistrationPage> {
             ),
             Align(
                 alignment: Alignment.center,
-                child: Image.asset('assets/images/Register.png')),
+                child: Image.asset('assets/images/Register.png',scale: 2.5,)),
             SizedBox(height: 13,),
             Align(
                 alignment: Alignment.center,
-                child: Image.asset('assets/images/Create your account to continue.png'))
+                child: Image.asset('assets/images/Create your account to continue.png',scale: 3,))
           ,
             SizedBox(height: 25,),
             CustomTextField("First Name","person_icon.png"),
@@ -40,7 +41,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
             SizedBox(height: 30,),
             CustomTextField("Date of birth","calendar_icon.png"),
             SizedBox(height: 18,),
-            Align(alignment: Alignment.topLeft,child:Image.asset("assets/images/Gender.png")),
+            CustomSmallText("Gender"),
             SizedBox(height: 30,),
             CustomTextField("Password","lock_icon.png"),
             SizedBox(height: 30,),

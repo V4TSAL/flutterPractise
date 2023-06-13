@@ -23,9 +23,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(126, 253, 208, 1),
       body: Column(children: [SizedBox(width: 1000,height:278),
-        Image.asset('assets/images/Vector.png'),
+        Image.asset('assets/images/Vector.png',scale: 4,),
         SizedBox(height: 207,),
-        Image.asset('assets/images/Group 947.png'),
+        Image.asset('assets/images/Group 947.png',scale: 3,),
       ],),
     );
   }

@@ -24,13 +24,19 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 75),
               Align(
                   alignment: Alignment.topCenter,
-                  child: Image.asset('assets/images/Welcome back.png')),
+                  child: Image.asset(
+                    'assets/images/Welcome back.png',
+                    scale: 2.75,
+                  )),
               SizedBox(
                 height: 18,
               ),
               Align(
                   alignment: Alignment.topCenter,
-                  child: Image.asset('assets/images/Login to continue.png')),
+                  child: Image.asset(
+                    'assets/images/Login to continue.png',
+                    scale: 3.3,
+                  )),
               SizedBox(
                 height: 75,
               ),
@@ -45,8 +51,14 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Align(
                   alignment: Alignment.topRight,
-                  child: Image.asset('assets/images/Forgot password_.png')),
-              SizedBox(height: 25),
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 13.0, right: 3.0),
+                    child: Image.asset(
+                      'assets/images/Forgot password_.png',
+                      scale: 3.5,
+                    ),
+                  )),
+              // SizedBox(height: 25),
               ButtonCustom(
                   context,
                   295,
@@ -70,26 +82,48 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Image.asset("assets/images/Vector 2.png"),
+                    child: Image.asset(
+                      "assets/images/Vector 2.png",
+                      scale: 4.5,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Image.asset("assets/images/Or sign in with.png"),
+                    child: Image.asset(
+                      "assets/images/Or sign in with.png",
+                      scale: 3,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Image.asset("assets/images/Vector 2.png"),
+                    child: Image.asset(
+                      "assets/images/Vector 2.png",
+                      scale: 4.5,
+                    ),
                   )
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              // Image.asset("assets/images/img.png"),
+              Row(
+                children: [
+                  SizedBox(width: 80,),
+                  Image.asset("assets/images/Apple.png",scale: 4,),
+                  SizedBox(width: 15,),
+                  Image.asset("assets/images/Google.png",scale: 4,),
+                  SizedBox(width: 15,),
+                  Image.asset("assets/images/Linked In.png",scale: 4,),
+                  SizedBox(width: 15,),
+                  Image.asset("assets/images/Facebook.png",scale: 4,)
                 ],
               ),
               SizedBox(
                 height: 25,
               ),
-              Image.asset("assets/images/img.png"),
-              SizedBox(
-                height: 25,
-              ),
-              Image.asset("assets/images/Don’t have an account_ Sign Up.png")
+              Image.asset("assets/images/Don’t have an account_ Sign Up.png",
+                  scale: 3.75)
             ],
           ),
         ));
