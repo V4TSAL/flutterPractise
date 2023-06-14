@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget TextInRectangle(String t, String img) {
   return Padding(
-    padding: const EdgeInsets.only(top:13.0, left: 5,right: 19),
+    padding: const EdgeInsets.only(top:13.0, left: 9,right: 19),
     child: (Container(
         height: 42,
         constraints: const BoxConstraints(

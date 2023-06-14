@@ -1,11 +1,19 @@
 import 'package:first_task_s/fist_page.dart';
-import 'package:first_task_s/welcome_back_page.dart';
-import 'package:first_task_s/welcoming_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-void main() => runApp(
-  MaterialApp(
-    home: SplashScreen(),
-  ),
-);
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+
+    MaterialApp(
+      home: SplashScreen(),
+      theme: ThemeData(
+        fontFamily: GoogleFonts
+            .montserrat()
+            .fontFamily,
+      ),
+    ),
+  );
+}
 
