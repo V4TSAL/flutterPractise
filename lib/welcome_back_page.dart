@@ -70,6 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                   false,
                   () => {
                         // Navigator.popUntil(context, ModalRoute.withName(Navigator.defaultRouteName)),
+                  Navigator.of(context).pop(),
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => HomePage()),

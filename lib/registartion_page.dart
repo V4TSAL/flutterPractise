@@ -2,6 +2,7 @@ import 'package:first_task_s/Widgets/apbar.dart';
 import 'package:first_task_s/Widgets/button.dart';
 import 'package:first_task_s/Widgets/custom_text.dart';
 import 'package:first_task_s/Widgets/textfield.dart';
+import 'package:first_task_s/set_state_practise.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -50,7 +51,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
             ButtonCustom(context,295, 126, 253, 208, 1, "Login", false,(){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Text("REGISTRATION COMPLETE")),
+                MaterialPageRoute(builder: (context) => SetStatePractise()),
               );
             }),
           ],
